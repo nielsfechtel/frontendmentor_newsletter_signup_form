@@ -1,6 +1,7 @@
 :root {
   --color-bg: hsl(237.39deg 17.29% 26.08%);
   --color-tomato: hsl(4deg, 100%, 67%);
+  --color-orange: hsl(12deg 100% 62%);
   --color-black: hsl(0deg 0% 20%);
   --color-white: hsl(0deg 0% 99%);
 
@@ -113,9 +114,13 @@ body {
       transition: all 0.1s;
 
       &:hover {
-        background-color: hsl(from var(--color-bg) h s calc(1.2 * l));
+        background: linear-gradient(
+          134deg,
+          var(--color-tomato) 25%,
+          var(--color-orange) 75%
+        );
         filter: drop-shadow(
-          2px 2px 5px hsl(from var(--color-black) h s l / 0.5)
+          4px 4px 7px hsl(from var(--color-tomato) h s l / 0.4)
         );
       }
     }
